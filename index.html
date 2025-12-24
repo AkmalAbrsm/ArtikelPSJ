@@ -22,7 +22,7 @@
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #e63946 0%, #dc2f02 100%);
             color: white;
             padding: 2rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -56,16 +56,16 @@
         }
 
         h2 {
-            color: #667eea;
+            color: #e63946;
             margin-top: 2rem;
             margin-bottom: 1rem;
             font-size: 1.8rem;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #e63946;
             padding-bottom: 0.5rem;
         }
 
         h3 {
-            color: #764ba2;
+            color: #dc2f02;
             margin-top: 1.5rem;
             margin-bottom: 0.8rem;
             font-size: 1.3rem;
@@ -77,7 +77,7 @@
         }
 
         a {
-            color: #667eea;
+            color: #e63946;
             text-decoration: none;
             font-weight: 600;
             border-bottom: 2px solid transparent;
@@ -85,12 +85,12 @@
         }
 
         a:hover {
-            border-bottom: 2px solid #667eea;
+            border-bottom: 2px solid #e63946;
         }
 
         .highlight-box {
-            background-color: #f0f4ff;
-            border-left: 4px solid #667eea;
+            background-color: #fff5f5;
+            border-left: 4px solid #e63946;
             padding: 1.5rem;
             margin: 1.5rem 0;
             border-radius: 5px;
@@ -103,11 +103,87 @@
         }
 
         footer {
-            background-color: #2d3748;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: white;
-            text-align: center;
-            padding: 2rem;
+            padding: 3rem 2rem;
             margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: #e63946;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section li {
+            color: #d4d4d4;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .footer-section a {
+            color: #d4d4d4;
+            text-decoration: none;
+            transition: color 0.3s;
+            border-bottom: 1px solid transparent;
+        }
+
+        .footer-section a:hover {
+            color: #e63946;
+            border-bottom: 1px solid #e63946;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #888;
+        }
+
+        .footer-icon {
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        .network-image {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .network-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .network-illustration {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .network-illustration svg {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
         }
 
         .word-count {
@@ -152,6 +228,40 @@
     </header>
 
     <main class="container">
+        <div class="network-illustration">
+            <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Server -->
+                <rect x="350" y="50" width="100" height="80" fill="#e63946" rx="5"/>
+                <text x="400" y="95" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Server</text>
+                
+                <!-- Firewall -->
+                <rect x="350" y="180" width="100" height="60" fill="#dc2f02" rx="5"/>
+                <text x="400" y="215" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Firewall</text>
+                
+                <!-- Clients -->
+                <circle cx="200" cy="320" r="30" fill="#457b9d"/>
+                <text x="200" y="325" text-anchor="middle" fill="white" font-size="12">PC 1</text>
+                
+                <circle cx="400" cy="320" r="30" fill="#457b9d"/>
+                <text x="400" y="325" text-anchor="middle" fill="white" font-size="12">PC 2</text>
+                
+                <circle cx="600" cy="320" r="30" fill="#457b9d"/>
+                <text x="600" y="325" text-anchor="middle" fill="white" font-size="12">PC 3</text>
+                
+                <!-- Connections -->
+                <line x1="400" y1="130" x2="400" y2="180" stroke="#333" stroke-width="2"/>
+                <line x1="400" y1="240" x2="200" y2="290" stroke="#333" stroke-width="2"/>
+                <line x1="400" y1="240" x2="400" y2="290" stroke="#333" stroke-width="2"/>
+                <line x1="400" y1="240" x2="600" y2="290" stroke="#333" stroke-width="2"/>
+                
+                <!-- Labels -->
+                <text x="400" y="30" text-anchor="middle" fill="#333" font-size="16" font-weight="bold">Arsitektur Keamanan Jaringan</text>
+                <text x="420" y="155" fill="#666" font-size="11">↓ Protected</text>
+                <text x="420" y="265" fill="#666" font-size="11">↓ Filtered</text>
+            </svg>
+            <p style="color: #666; margin-top: 1rem; font-style: italic;">Ilustrasi sederhana sistem keamanan jaringan dengan firewall</p>
+        </div>
+
         <section id="pendahuluan">
             <h2>Pendahuluan</h2>
             <p class="intro">
@@ -342,9 +452,37 @@
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 - Artikel Pengamanan Sistem Jaringan</p>
-            <p>Dibuat untuk keperluan UAS Mata Kuliah PSJ</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>📚 Tentang Artikel</h4>
+                <p>Artikel ini membahas tentang Pengamanan Sistem Jaringan, mencakup konsep dasar, ancaman, strategi pertahanan, dan best practices dalam melindungi infrastruktur digital.</p>
+                <p style="margin-top: 1rem;"><strong>Penulis:</strong> Mahasiswa PSJ</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>🔗 Tautan Penting</h4>
+                <ul>
+                    <li><a href="https://upnyk.ac.id" target="_blank">🏛️ UPNYK Official</a></li>
+                    <li><a href="https://github.com/AkmalAbrsm/ArtikelPSJ" target="_blank">💻 Source Code GitHub</a></li>
+                    <li><a href="#pendahuluan">📖 Baca dari Awal</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>📝 Informasi</h4>
+                <ul>
+                    <li><span class="footer-icon">📅</span> Dibuat: 25 Desember 2025</li>
+                    <li><span class="footer-icon">📊</span> Jumlah Kata: ~1,450</li>
+                    <li><span class="footer-icon">🎓</span> Mata Kuliah: PSJ</li>
+                    <li><span class="footer-icon">🏫</span> Universitas: UPNYK</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p style="margin-bottom: 0.5rem;">🔒 <strong>Keamanan Jaringan</strong> - Melindungi Data, Menjaga Kepercayaan</p>
+            <p>&copy; 2025 Artikel Pengamanan Sistem Jaringan | UAS Mata Kuliah PSJ</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Dipersembahkan oleh <a href="https://upnyk.ac.id" target="_blank" style="color: #e63946; font-weight: bold;">Universitas Pembangunan Nasional Veteran Yogyakarta</a></p>
         </div>
     </footer>
 </body>
